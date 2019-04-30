@@ -20,7 +20,9 @@
   margin-top: 200px;
 } */
 
-.mainPagePicBlock{
+/* OLD CODE */
+
+/* .mainPagePicBlock{
   border-radius: 8px;
   width: 160px;
 }
@@ -36,20 +38,21 @@
 }
 
 .maincard{
-  /* border: red solid 1px; */
+  border: red solid 1px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: -100px;
   margin-right: 12px;
   margin-top: 10px;
-  display: flex;
-
 }
 
 .container{
-  padding: 2px;
-  /* border: red solid 1px; */
+  padding: 2px 16px;
+  border: red solid 1px;
+  display: flex;
+  flex-wrap:wrap; 
+  flex-flow: row wrap;
 }
 
 .likeIcon{
@@ -63,7 +66,91 @@
 
 .test{
   border: red solid 1px;
+} */
+
+
+
+
+/* THIS IS TASTE CODE */
+.grid {
+  -webkit-column-count: 3;
+  -webkit-column-gap: 5px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 5px;
+  -moz-column-fill: auto;
+  column-count: 2;
+  column-gap: 5px;
+  column-fill: auto;
+  padding: 5px;
 }
 
+.block {
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 2vh;
+  border-radius: 5px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  line-height: normal;
+  min-height:65vh;
+}
+
+/* .one {
+  height: 60vh;
+}
+
+.two {
+  height: 65vh;
+}
+
+.three {
+  height: 60vh;
+} */
+
+.newsImg{
+  max-width: 100%;
+  min-height: 65%;
+  border-radius: 5px 5px 0 0;
+}
+.newsBody{
+  padding: 1vh 2vw 1vh 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.newsTitle{
+  font-family: Roboto;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #000;
+  line-height: normal;
+}
+
+.newsContent{
+  display: block;
+  font-family: Roboto;
+  font-size: 22rpx;
+  line-height: normal;
+}
+.row-end{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  margin-top: 1vh;
+}
+.icon{
+  align-self: center;
+}
+.noOfLikes{
+  font-size: 26rpx;
+  color: black;
+}
 
 

@@ -1,4 +1,3 @@
-<van-row>
 <view>
  <CustomNav title="Home" showProfile="{{true}}" profilePic="{{userInfo.avatarUrl}}" />
 </view>
@@ -12,74 +11,49 @@
         <van-tab title="健身"/>
     </van-tabs>
 
-<!-- <view class="container"> -->
-  <van-row class="container" gutter="8">
-    <van-col span="12">
-      <view>
-      <Items 
-          description="A picture of a beautiful scene in canada. This picture was taken by Mr David"
-          likes="133" 
+<view class="grid">
+    <view>
+        <Items 
+          title="Ace Dining joins Foodchains!"
+          content="Ace Dining is a premium steak, pasta and wine concept started by Sammy Tao. She insists on high quality Narrative can be     organized in a number of thematic or formal categories Narratives may also be nested within other narratives, such as narratives told by an"
           mediaType="image"
-          media="../../utils/image1.jpg"/>
-      </view>
-    </van-col>
-    
-    <van-col span="12">
+          media="../../utils/imagea.jpg" 
+        />
+    </view>
+
       <view>
         <Items 
-          description="just a sample video"
-          likes="{{value}}" 
+          title="Ace Dining joins Foodchains!"
+          content="This week HM Queen Elizabeth joined us after noticing thatFoodchains is offering fabulous deals in her local area.Prince"
           mediaType="video"
-          media="../../utils/video1.mp4" 
+          media="../../utils/video1.MP4" 
         />
-      </view>
-    </van-col>
+    </view>
 
-     <van-col span="12">
       <view>
         <Items 
-          description="just a sample video"
-          likes="24" 
-          mediaType="video"
-          media="../../utils/video1.mp4" 
-        />
-      </view>
-    </van-col>
-
-    <van-col span="12">
-      <view>
-      <Items 
-          description="A picture of a beautiful scene in canada. This picture was taken by Mr David"
-          likes="133" 
+          title="Ace Dining joins Foodchains!"
+          content="Ace Dining is a premium steak, pasta and wine concept started by Sammy Tao. She insists on high quality Narrative can be     organized in a number of thematic or formal categories Narratives may also be nested within other narratives, such as narratives told by an"
           mediaType="image"
-          media="../../utils/image1.jpg"/>
-      </view>
-    </van-col>
+          media="../../utils/imagec.jpg" 
+        />
+    </view>
 
-
-    <van-col span="12">
       <view>
         <Items 
-          description="just a sample video"
-          likes="24" 
-          mediaType="video"
-          media="../../utils/video1.mp4" 
-        />
-      </view>
-    </van-col>
-
-    <van-col span="12">
-      <view>
-      <Items 
-          description="A picture of a beautiful scene in canada. This picture was taken by Mr David"
-          likes="133" 
+          title="Ace Dining joins Foodchains!"
+          content="This week HM Queen Elizabeth joined us after noticing thatFoodchains is offering fabulous deals in her local area.Prince"
           mediaType="image"
-          media="../../utils/image1.jpg"/>
-      </view>
-    </van-col>
+          media="../../utils/image1.jpg" 
+        />
+    </view>
 
-      </van-row>
-       <!-- </view> -->
-</van-row>
-
-
+      <view>
+        <Items 
+          title="Ace Dining joins Foodchains!"
+          content="Ace Dining is a premium steak, pasta and wine concept started by Sammy Tao. She insists on high quality Narrative can be     organized in a number of thematic or formal categories Narratives may also be nested within other narratives, such as narratives told by an"
+          mediaType="image"
+          media="../../utils/image1.jpg" 
+        />
+    </view>
+</view>

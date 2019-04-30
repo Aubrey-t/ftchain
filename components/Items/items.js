@@ -2,7 +2,7 @@ const app = getApp();
 
 Component({
   properties: {
-    description: {
+    content: {
       type: String,
       value: '',
     },
@@ -10,7 +10,7 @@ Component({
       type: String,
       value: '',
     },
-    likes: {
+    title: {
       type: String,
       value: '',
     },
@@ -20,12 +20,24 @@ Component({
     }
   },
 
+  data:{
+    countLikes: 0,
+    countSuperLikes: 0
+  },
+
   methods: {
+
     goToDetail: () => {
-      console.log('go to details');
       wx.navigateTo({
         url: '../../pages/pageDetail/pageDetail',
       });
     },
+
+    addLikes: function(){
+      this.setData({
+          countLikes: this.data.countLikes + 1
+      });
+    },
   }
 })
+
