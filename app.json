@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/pageDetail/pageDetail",
+    "pages/logs/logs",
+    "pages/profile/profile",
+    "components/CustomNav/customNav",
+    "components/Items/items"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+
+  "usingComponents": {
+    "van-col": "vant-weapp/dist/col/index",
+    "van-row": "vant-weapp/dist/row/index",
+    "van-search": "vant-weapp/lib/search/index",
+    "van-card": "vant-weapp/lib/card/index",
+    "van-tab": "vant-weapp/dist/tab/index",
+    "van-tabs": "vant-weapp/dist/tabs/index",
+    "van-icon": "vant-weapp/dist/icon/index",
+    "van-field": "vant-weapp/dist/field/index"
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "CustomNav": "../../components/CustomNav/customNav",
+    "Items": "../../components/Items/items"
+  },
+
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,85 @@
+<van-row>
+<view>
+ <CustomNav title="Home" showProfile="{{true}}" profilePic="{{userInfo.avatarUrl}}" />
+</view>
+    <van-search class="search" span="24" value="{{ value }}" placeholder="search" />
+    <van-tabs active="{{ active }}">
+        <van-tab title="推荐"/>
+        <van-tab title="附近"/>
+        <van-tab title="视频"/>
+        <van-tab title="旅行"/>
+        <van-tab title="男士穿搭"/>
+        <van-tab title="健身"/>
+    </van-tabs>
+
+<!-- <view class="container"> -->
+  <van-row class="container" gutter="8">
+    <van-col span="12">
+      <view>
+      <Items 
+          description="A picture of a beautiful scene in canada. This picture was taken by Mr David"
+          likes="133" 
+          mediaType="image"
+          media="../../utils/image1.jpg"/>
+      </view>
+    </van-col>
+    
+    <van-col span="12">
+      <view>
+        <Items 
+          description="just a sample video"
+          likes="{{value}}" 
+          mediaType="video"
+          media="../../utils/video1.mp4" 
+        />
+      </view>
+    </van-col>
+
+     <van-col span="12">
+      <view>
+        <Items 
+          description="just a sample video"
+          likes="24" 
+          mediaType="video"
+          media="../../utils/video1.mp4" 
+        />
+      </view>
+    </van-col>
+
+    <van-col span="12">
+      <view>
+      <Items 
+          description="A picture of a beautiful scene in canada. This picture was taken by Mr David"
+          likes="133" 
+          mediaType="image"
+          media="../../utils/image1.jpg"/>
+      </view>
+    </van-col>
+
+
+    <van-col span="12">
+      <view>
+        <Items 
+          description="just a sample video"
+          likes="24" 
+          mediaType="video"
+          media="../../utils/video1.mp4" 
+        />
+      </view>
+    </van-col>
+
+    <van-col span="12">
+      <view>
+      <Items 
+          description="A picture of a beautiful scene in canada. This picture was taken by Mr David"
+          likes="133" 
+          mediaType="image"
+          media="../../utils/image1.jpg"/>
+      </view>
+    </van-col>
+
+      </van-row>
+       <!-- </view> -->
+</van-row>
+
+

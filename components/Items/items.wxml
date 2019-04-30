@@ -1,0 +1,14 @@
+<view >
+  <custom-component>
+      <view class="maincardcontainer">
+        <view>
+          <image class="maincardcontainerMedia" bindtap="goToDetail" src="{{media}}" wx:if="{{mediaType === 'image'}}" />
+          <video class="maincardcontainerMedia" bindtap="goToDetail" src="{{media}}" wx:if="{{mediaType === 'video'}}" />
+        </view>
+        <view class="mainContentText" bindtap="goToDetail">{{description}}</view>
+        <view class="numberofLikes">
+          <van-icon bind:click="addLikes" name="like-o" size="17px">{{value}}</van-icon>
+        </view>
+      </view>
+    </custom-component>
+</view>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "vant-weapp": "^0.5.11"
+  }
+}

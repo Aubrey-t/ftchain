@@ -1,0 +1,56 @@
+<!--pages/pageDetail/pageDetail.wxml-->
+<view>
+<van-col>
+<van-row>
+  <CustomNav title="Details" showProfile="{{false}}" profilePic="{{userInfo.avatarUrl}}" />
+  <van-col span="5" offset="2">
+      <view class="imageaIcon">
+        <video
+          class=""
+          src="../../utils/video1.mp4"
+        /> 
+      </view>
+  </van-col>
+
+   <van-col span="18" offset="1">
+      <view class="container" >
+          <text class="commentContentText">A picture of a beautiful scene in canada. This picture was taken by Mr David</text>
+      </view>
+    </van-col>
+
+     <van-col span="18" offset="2">
+      <view class="commentIcons">
+      <van-row>
+        <van-col span="2"><van-icon name="like-o"/></van-col>
+        <van-col span="20"><van-icon name="share"/></van-col>
+        <van-col span="2"><van-icon name="star-o"/></van-col>
+      </van-row>
+      </view>
+    </van-col>
+
+     <van-col span="12" offset="2">
+     <view>
+        <van-row>
+          <van-col >
+            <textarea class="commentBox" />
+          </van-col> 
+        </van-row>
+      </view>
+      </van-col> 
+
+  <!-- <van-col span="18" offset="2">
+      <view class="comments" >
+      <van-cell-group>
+        <van-field
+            value="{{ message }}"
+            label="leave a comment"
+            type="textarea"
+            placeholder="comment"
+            border="{{ true }}"
+         />
+        </van-cell-group>
+        </view>
+  </van-col> -->
+  </van-row>
+  </van-col>
+</view>
