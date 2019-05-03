@@ -1,13 +1,23 @@
 //index.js
 //获取应用实例
+const AV = require('../../utils/av-weapp-min.js');
+const File = require('../../model/Files/file');
+
 const app = getApp()
+const getDataForRender = file => ({
+  title: file.get('title'),
+  content:file.get('content'),
+  mediaType:file.get('mediaType'),
+  media:file.get('url')
+});
 
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    files: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -15,6 +25,16 @@ Page({
       url: '../logs/logs'
     })
   },
+
+  onReady() {
+    new AV.Query('File')
+    .find()
+    .then(files => this.setData({
+      files: files.map(getDataForRender)
+    }))
+    .catch(console.error);
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -43,6 +63,7 @@ Page({
       })
     }
   },
+
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

@@ -1,4 +1,12 @@
 //app.js
+// Require Leancloud library (the av-weapp-min.js).
+const AV = require('./utils/av-weapp-min.js');
+AV.init({
+  appId: 'lhVGH8pt5CdqzisArruQrsds-gzGzoHsz',
+  appKey: 'g7XBwY5K7LevQEJTqcNPH52X',
+});
+
+
 App({
   onLaunch: function () {
     // 展示本地存储能力

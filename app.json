@@ -5,7 +5,10 @@
     "pages/logs/logs",
     "pages/profile/profile",
     "components/CustomNav/customNav",
-    "components/Items/items"
+    "components/Items/items",
+    "model/Files/file",
+    "model/Users/users",
+    "model/Comments/comments"
   ],
   "window": {
     "navigationStyle": "custom"

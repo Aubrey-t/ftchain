@@ -5,9 +5,11 @@
   <CustomNav title="Details" showProfile="{{false}}" profilePic="{{userInfo.avatarUrl}}" />
   <van-col span="5" offset="2">
       <view class="imageaIcon">
-        <video
-          class=""
-          src="../../utils/video1.mp4"
+        <Items 
+          title="Ace Dining joins Foodchains!"
+          content="This week HM Queen Elizabeth joined us after noticing thatFoodchains is offering fabulous deals in her local area.Prince"
+          mediaType="video"
+          media="../../utils/video1.MP4" 
         /> 
       </view>
   </van-col>
