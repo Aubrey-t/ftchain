@@ -4,26 +4,23 @@
 <van-row>
   <CustomNav title="Details" showProfile="{{false}}" profilePic="{{userInfo.avatarUrl}}" />
   <van-col span="5" offset="2">
-      <view class="imageaIcon">
-        <Items 
-          title="Ace Dining joins Foodchains!"
-          content="This week HM Queen Elizabeth joined us after noticing thatFoodchains is offering fabulous deals in her local area.Prince"
-          mediaType="video"
-          media="../../utils/video1.MP4" 
-        /> 
+      <view class="mediaIcon">
+      <image src="{{media}}" mode="aspectFill" wx:if="{{mediaType === 'image'}}" />
+      <video src="{{media}}" mode="aspectFill" wx:if="{{mediaType === 'video'}}" /> 
       </view>
   </van-col>
 
    <van-col span="18" offset="1">
       <view class="container" >
-          <text class="commentContentText">A picture of a beautiful scene in canada. This picture was taken by Mr David</text>
+          <text class="commentContentText">{{content}}</text>
       </view>
     </van-col>
 
      <van-col span="18" offset="2">
       <view class="commentIcons">
       <van-row>
-        <van-col span="2"><van-icon name="like-o"/></van-col>
+        <van-col span="2"><van-icon info="{{likes}}" name="like-o"/></van-col>
+        <!-- <text class='noOfLikes'>{{likes}}</text> -->
         <van-col span="20"><van-icon name="share"/></van-col>
         <van-col span="2"><van-icon name="star-o"/></van-col>
       </van-row>

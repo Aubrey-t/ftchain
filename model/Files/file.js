@@ -1,6 +1,8 @@
 const AV = require('../../utils/av-weapp-min.js');
 
-class File extends AV.Object {
+var file = new AV.File();
+class File extends AV.Object{
+
   get title() {
     return this.get('title');
   }
@@ -14,7 +16,7 @@ class File extends AV.Object {
   }
 
   get media() {
-    return this.get('url');
+    return this.get('url')
   }
 }
 

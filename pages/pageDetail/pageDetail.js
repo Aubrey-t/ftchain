@@ -1,18 +1,29 @@
 // pages/pageDetail/pageDetail.js
+const app = getApp()
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    media : '',
+    content:'',
+    likes:'',
+    mediaType:''
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    // console.log(options.data)
+    var objData =JSON.parse(options.data)
+    this.setData({
+        media:objData.media,
+        content:objData.content,
+        likes:objData.countLikes,
+        mediaType: objData.mediaType
+    });
   },
 
   /**

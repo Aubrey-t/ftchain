@@ -6,8 +6,8 @@ const File = require('../../model/Files/file');
 const app = getApp()
 const getDataForRender = file => ({
   title: file.get('title'),
-  content:file.get('content'),
-  mediaType:file.get('mediaType'),
+  content:file.get('description'),
+  mediaType:file.get('imageType'),
   media:file.get('url')
 });
 
@@ -27,11 +27,12 @@ Page({
   },
 
   onReady() {
-    new AV.Query('File')
+    new AV.Query('_File')
     .find()
     .then(files => this.setData({
       files: files.map(getDataForRender)
     }))
+    // .then(files => {console.log(files)})
     .catch(console.error);
   },
 

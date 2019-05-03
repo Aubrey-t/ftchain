@@ -22,14 +22,19 @@ Component({
 
   data:{
     countLikes: 0,
-    countSuperLikes: 0
+    superLike: 0,
+    title:'',
+    content:'',
+    media:'',
+    mediaType: ''
   },
 
   methods: {
 
-    goToDetail: () => {
+    goToDetail: function (){
+      var urlData = JSON.stringify(this.data);
       wx.navigateTo({
-        url: '../../pages/pageDetail/pageDetail',
+        url: `../../pages/pageDetail/pageDetail?data=${urlData}`,
       });
     },
 
@@ -37,6 +42,14 @@ Component({
       this.setData({
           countLikes: this.data.countLikes + 1
       });
+      // console.log(this.data.media)
+    },
+
+    addSuperLikes: function () {
+      this.setData({
+        superLikes: this.data.superLikes + 1
+      });
+      // console.log(this.data.media)
     },
   }
 })

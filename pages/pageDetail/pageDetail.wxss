@@ -7,8 +7,14 @@
    border-radius: 8px;
 }
 
-.imageaIcon{
+.mediaIcon{
   margin-top: 50rpx;
+}
+
+.noOfLikes{
+  font-size: 26rpx;
+  color: black;
+  padding-right: 30rpx;
 }
 
 .container{
