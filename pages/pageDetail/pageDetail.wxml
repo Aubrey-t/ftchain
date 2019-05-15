@@ -5,51 +5,43 @@
   <CustomNav title="Details" showProfile="{{false}}" profilePic="{{userInfo.avatarUrl}}" />
   <van-col span="5" offset="2">
       <view class="mediaIcon">
-      <image src="{{media}}" mode="aspectFill" wx:if="{{mediaType === 'image'}}" />
-      <video src="{{media}}" mode="aspectFill" wx:if="{{mediaType === 'video'}}" /> 
+      <image src="{{media}}" mode="aspectFill" wx:if="{{fileType === 'image'}}" />
+      <video src="{{media}}" mode="aspectFill" wx:if="{{fileType === 'video'}}" /> 
       </view>
   </van-col>
 
    <van-col span="18" offset="1">
       <view class="container" >
-          <text class="commentContentText">{{content}}</text>
+          <text class="commentContentText">{{fileDescription}}</text>
       </view>
     </van-col>
 
      <van-col span="18" offset="2">
       <view class="commentIcons">
       <van-row>
-        <van-col span="2"><van-icon info="{{likes}}" name="like-o"/></van-col>
+        <van-col span="2"><van-icon bind:click="addLikes"info="{{likes}}" name="like-o"/></van-col>
         <!-- <text class='noOfLikes'>{{likes}}</text> -->
         <van-col span="20"><van-icon name="share"/></van-col>
-        <van-col span="2"><van-icon name="star-o"/></van-col>
+        <van-col span="2"><van-icon bind:click="superLikes" info="{{superLikes}}" name="star-o"/></van-col>
       </van-row>
       </view>
     </van-col>
 
-     <van-col span="12" offset="2">
      <view>
         <van-row>
-          <van-col >
-            <textarea class="commentBox" />
+          <van-col offset="2">
+              <form bindsubmit="bindFormSubmit">
+                <textarea name='comment' placeholder="comments" class="commentBox" />
+                <button class="submitButton"  form-type="submit" loading="{{loading}}"><text class="submiText">send</text></button>
+              </form>
           </van-col> 
         </van-row>
       </view>
-      </van-col> 
-
-  <!-- <van-col span="18" offset="2">
-      <view class="comments" >
-      <van-cell-group>
-        <van-field
-            value="{{ message }}"
-            label="leave a comment"
-            type="textarea"
-            placeholder="comment"
-            border="{{ true }}"
-         />
-        </van-cell-group>
-        </view>
-  </van-col> -->
+    <view>
+      <view class="commentList" wx:for="{{comments}}" wx:key="index">
+        <text class="commentText">{{comments[index].comment}}</text>
+     </view>
+    </view>
   </van-row>
   </van-col>
 </view>

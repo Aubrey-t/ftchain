@@ -1,15 +1,15 @@
 <view>
 <custom-component>
     <view class="block">
-         <image class='newsImg' bindtap="goToDetail" src="{{media}}" mode="aspectFill" wx:if="{{mediaType === 'image'}}" />
-         <video class='newsImg' bindtap="goToDetail" src="{{media}}" mode="aspectFill" wx:if="{{mediaType === 'video'}}" />
+         <image class='newsImg' bindtap="goToDetail" src="{{media}}" mode="aspectFill" wx:if="{{fileType === 'image'}}" />
+         <video class='newsImg' bindtap="goToDetail" src="{{media}}" mode="aspectFill" wx:if="{{fileType === 'video'}}" />
         <view class='newsBody'>
-          <text class='newsTitle'>{{title}}</text>
-          <text class='newsContent' bindtap="goToDetail">{{content}}</text>
+          <text class='newsTitle'>{{name}}</text>
+          <text class='newsContent' bindtap="goToDetail">{{articleDescription}}</text>
           <view class='row-end'>
             <view class='icon'>
               <van-icon bind:click="addLikes" class='icon' size='13px' name="like-o" />
-              <text class='noOfLikes'>{{countLikes}}</text>
+              <text class='noOfLikes'>{{likes}}</text>
             </view>
           </view>
         </view>

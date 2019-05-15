@@ -6,9 +6,10 @@
     "pages/profile/profile",
     "components/CustomNav/customNav",
     "components/Items/items",
-    "model/Files/file",
     "model/Users/users",
-    "model/Comments/comments"
+    "model/Comments/comments",
+    "model/Files/files",
+    "model/Article/article"
   ],
   "window": {
     "navigationStyle": "custom"

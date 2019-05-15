@@ -12,13 +12,20 @@
     </van-tabs>
 
 <view class="grid">
-    <view wx:for="{{files}}">
+    <view wx:for="{{files}}" wx:key="index">
       <Items
         content="{{files[index].content}}"
         title="{{files[index].title}}"
         mediaType="{{files[index].mediaType}}"
         media="{{files[index].media}}"
+        name="{{files[index].name}}"
+        likes="{{files[index].likes}}"  
+
+        objectId="{{files[index].objectId}}"
+        articleId="{{articles[index].articleId}}"
+        articleDescription="{{articles[index].articleDescription}}"
+        fileType="{{articles[index].fileType}}"
+        articleTitle="{{articles[index].articleTitle}}" 
       />
     </view>
-
 </view>

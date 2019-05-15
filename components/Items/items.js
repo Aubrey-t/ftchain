@@ -1,3 +1,5 @@
+const AV = require('../../utils/av-weapp-min.js');
+const form = require('../../model/Article/article.js');
 const app = getApp();
 
 Component({
@@ -17,17 +19,57 @@ Component({
     mediaType: {
       type: String,
       value:'',
-    }
+    },
+
+    likes: {
+      type: Number,
+      value: '',
+    },
+
+    name: {
+      type: String,
+      value: '',
+    },
+    objectId: {
+      type: String,
+      value: '',
+    },
+
+    articleId: {
+      type: String,
+      value: '',
+    },
+
+    articleTitle: {
+      type: String,
+      value: '',
+    },
+
+    articleDescription: {
+      type: String,
+      value: '',
+    },
+
+    fileType: {
+      type: String,
+      value: '',
+    },
   },
 
   data:{
-    countLikes: 0,
-    superLike: 0,
+    likes:0 ,
     title:'',
+    name:'',
     content:'',
     media:'',
-    mediaType: ''
+    mediaType: '',
+    objectId:'',
+    articleId:'',
+    articleTitle:'',
+    articleDesription:'',
+    fileType:''
   },
+
 
   methods: {
 
@@ -39,18 +81,41 @@ Component({
     },
 
     addLikes: function(){
-      this.setData({
-          countLikes: this.data.countLikes + 1
+      const self = this
+       
+      var todo = AV.Object.createWithoutData('Article', this.data.articleId);
+      todo.save().then(function (todo) {
+        todo.increment('likes', 1);
+        todo.fetchWhenSave(true);
+        return todo.save();
+      }).then(function (todo) {
+          self.queryArticle()
+      }, function (error) {
       });
-      // console.log(this.data.media)
+      
     },
+    queryArticle: function() {
+      // const self = this
+      var query = new AV.Query('Article');
+      query.get(this.data.articleId).then((todo) => {
+        var newData = (todo.toJSON())
+        this.setData({
+          likes: newData.likes
+        })
+      }).catch(function (error) {
+        console.error(error);
+      });
+    }
+  },
 
-    addSuperLikes: function () {
-      this.setData({
-        superLikes: this.data.superLikes + 1
-      });
-      // console.log(this.data.media)
-    },
-  }
+  ready() {
+    const self = this
+    self.queryArticle()
+  },
+
+  pullDownRefresh() {
+    const self = this
+    self.queryArticle()
+  },
 })
 

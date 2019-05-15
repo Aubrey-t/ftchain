@@ -36,18 +36,19 @@ Component({
 
   methods: {
     goBack: () => {
-      console.log('going back');
+      // console.log('going back');
       wx.navigateBack({ delta: 1 });
     },
     goToProfile: () => {
-      console.log('go to profile');
+      // console.log('go to profile');
       wx.navigateTo({
         url: '../profile/profile',
       });
     },
   },
+
   ready() {
-    console.log(getCurrentPages().length)
+    // console.log(getCurrentPages().length)
     if (getCurrentPages().length > 1) {
       this.setData({
         showBackButton: true,
